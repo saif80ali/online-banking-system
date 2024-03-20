@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Yourself</title>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    <!-- heading font  -->
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    header {
+        background: linear-gradient(45deg, white, rgb(24, 147, 178));
+        justify-content: space-between;
+        height: 80px;
+        display: flex;
+        align-items: center;
+    }
+
+    #heading {
+        display: flex;
+        align-items: center;
+
+        height: 100%;
+    }
+
+    #heading img {
+        filter: invert(32%);
+        height: 60px;
+        width: 113px;
+    }
+
+    #heading h2 {
+        letter-spacing: 1px;
+        font-size: 49px;
+        color: rgb(24, 147, 178);
+        font-family: 'Teko', sans-serif;
+    }
+
+    form {
+        margin: 29px auto;
+        display: flex;
+        flex-direction: column;
+        width: 26%;
+    }
+
+    .input {
+        margin: 4px;
+        padding: 10px 15px;
+        width: 519px;
+        border: 3px solid rgb(24, 147, 178);
+        outline: none;
+        border-radius: 6px;
+    }
+
+    #buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 519px;
+    }
+
+    .button {
+        margin: 12px;
+        padding: 9px 92px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 18px;
+        outline: none;
+        border: none;
+    }
+
+    #button1 {
+
+        background: linear-gradient( 45deg, black, rgb(24, 147, 178));
+        color: white;
+    }
+
+    #button2 {
+        background-color: grey;
+        color: white;
+    }
+
+    #button1:hover {
+        background: linear-gradient( 45deg, black, rgb(30, 128, 153));
+    }
+
+    #button2:hover {
+        background-color: rgb(141, 135, 135);
+    }
+</style>
+
+<body>
+    <header>
+        <div id="heading">
+            <img src="sbilogo.png">
+            <h2>State Bank Of India</h2>
+        </div>
+    </header>
+    <div id="form">
+        <form action="">
+            <input type="text" name="firstname" placeholder="Enter Your First Name..." class="input"
+                pattern="[A-Za-z]{2,}" title="Enter a Valid Name" required>
+            <input type="text" name="lastname" placeholder="Enter Your Last Name..." class="input"
+                pattern="[A-Za-z]{2,}" title="Enter a Valid Name" required>
+            <input type="number" name="acoountnumber" placeholder="Enter Your Account Number..." class="input"
+                pattern="[0-9]{10}" title="Enter Account Number Of 12 Digits" required>
+            <input type="email" name="email" placeholder="Enter Your Email..." class="input"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <input type="date" name="dob" placeholder="Enter Your Date of Birth..." class="input" required>
+            <select class="input">
+                <option class="input" value="1" selected>Select Your Gender</option>
+                <option class="input">Male</option>
+                <option class="input">Female</option>
+                <option class="input">Others</option>
+            </select>
+
+            <input type="tel" name="phonenumber" placeholder="Enter Your Phone Number..." pattern="[0-9]{10}"
+                class="input" title="Enter Valid Phone Number" required>
+            <!-- <input type="password" id="password" name="password" minlength="8"> -->
+            <input type="text" id="pswd1" name="password" placeholder="Create Your Password..." pattern=".{8,}"
+                title="Password must be 8 characters or more" class="input" required>
+            <div id="buttons"><button type="submit" id="button1" class="button">SUBMIT</button>
+                <button type="reset" id="button2" class="button">RESET</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a7f7913510.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Home Page</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #container {
+            width: 86vw;
+            height: 396px;
+            /* background-image: url(mountain.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; */
+            margin: auto;
+        }
+
+        #container::before {
+            position: absolute;
+            content: "";
+            width: 86vw;
+            height: 396px;
+            opacity: 0.8;
+            background-image: url(mountain.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div#profile {
+            height: 45px;
+            display: flex;
+            padding-top: 36px;
+            padding-right: 53px;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        #profile a {
+            z-index: 1;
+            display: flex;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 2rem;
+            border: 3px solid white;
+            width: 51px;
+            height: 51px;
+            background: rgb(27, 85, 76);
+            border-radius: 70%;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            /* font-family: sans-serif; */
+        }
+
+        #logo {
+            height: 100px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        #logo img {
+            height: 50px;
+            filter: invert(32%);
+        }
+
+        #logo h3 {
+            /* font-family: 'Roboto', sans-serif; */
+            font-family: ui-sans-serif;
+            z-index: 1;
+            color: white;
+            font-size: 44px;
+        }
+
+        div#main_container {
+            box-shadow: 0px -8px 19px;
+            height: 350px;
+            width: 86vw;
+            position: relative;
+            bottom: 40px;
+            left: 108px;
+            border-radius: 45px;
+            background: white;
+        }
+
+        div#grid_box {
+            padding-top: 56px;
+            display: grid;
+            justify-content: center;
+            grid-template-rows: 100px 100px;
+            grid-template-columns: 375px 375px;
+            grid-gap: 2rem 4rem;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            /* border: 2px solid black; */
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+        .box:hover{
+            border-radius: 63px;
+            border: 3px solid #24a0ed;
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: #24a0ed;
+        }
+
+        .box h2 {
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+            font-size: 22px;
+            color: #24a0ed;
+        }
+        p.slogan {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="profile"><a href="profile.html">S</a></div>
+        <div id="logo"><img id="img1"  src="sbilogo.png">
+            <h3>SBI</h3>
+        </div>
+        <p class="slogan" id="test">The banker to every Indian</p>
+    </div>
+    <div id="main_container">
+        <div id="grid_box">
+            <div class="box"><i class="fas fa-wallet icon"></i>
+                <h2>Check account balance</h2>
+            </div>
+            <div class="box" id="payment"><i class="far fa-handshake icon"></i>
+                <h2>New payment</h2>
+            </div>
+            <div class="box"><i class="fas fa-history icon"></i>
+                <h2>See all payment activity</h2>
+            </div>
+            <div class="box"><i class="fas fa-question-circle icon"></i>
+                <h2>Ask help?</h2>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+    $("#payment").click(function(){
+        // location.replace("newpayment.html");
+        window.open('newpayment.html','_parent');
+    } )
+    // $(".box").click(function(){
+    //     $("#img1").attr("src", "rocket.jpg");
+    // })
+</script>
+
+</html>
